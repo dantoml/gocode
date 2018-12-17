@@ -15,7 +15,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/mdempsky/gocode/internal/lookdot"
+	"github.com/dantoml/gocode/internal/lookdot"
 )
 
 type Config struct {
@@ -114,7 +114,7 @@ func (c *Config) parseOtherFile(filename string) *ast.File {
 
 	fi, err := os.Stat(filename)
 	if err != nil {
-		// TODO(mdempsky): How to handle this cleanly?
+		// TODO(dantoml): How to handle this cleanly?
 		panic(err)
 	}
 
@@ -273,7 +273,7 @@ func (c *Config) findOtherPackageFiles(filename, pkgName string) []string {
 	}
 	isTestFile := strings.HasSuffix(file, "_test.go")
 
-	// TODO(mdempsky): Use go/build.(*Context).MatchFile or
+	// TODO(dantoml): Use go/build.(*Context).MatchFile or
 	// something to properly handle build tags?
 	var out []string
 	for _, dent := range dents {

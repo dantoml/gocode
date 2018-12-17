@@ -199,7 +199,7 @@ func (b *candidateCollector) appendObject(obj types.Object) {
 		}
 	}
 
-	// TODO(mdempsky): Reconsider this functionality.
+	// TODO(dantoml): Reconsider this functionality.
 	if b.filter != nil && !b.filter(obj) {
 		return
 	}

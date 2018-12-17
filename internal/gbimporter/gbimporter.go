@@ -8,7 +8,7 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/mdempsky/gocode/internal/cache"
+	"github.com/dantoml/gocode/internal/cache"
 )
 
 // We need to mangle go/build.Default to make gcimporter work as
